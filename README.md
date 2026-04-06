@@ -50,20 +50,6 @@ Passionate about developing **scalable, real-world applications**, with a strong
 
 ---
 
-## 🔥 Contribution Streak
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=YOUR_USERNAME&theme=tokyonight&hide_border=true"/>
-</p>
-
----
-
-## 🐍 Contribution Graph
-<p align="center">
-  <img src="https://github.com/YOUR_USERNAME/YOUR_USERNAME/blob/output/github-contribution-grid-snake.svg" />
-</p>
-
----
-
 ## 🌐 Connect With Me
 <p>
   <a href="Your LinkedIn Link"><img src="https://img.shields.io/badge/LinkedIn-000?style=for-the-badge&logo=linkedin"/></a>
