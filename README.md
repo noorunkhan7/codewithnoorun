@@ -1,96 +1,165 @@
-<h1 align="center">Hi 👋, I'm Noorun Fatima Khan</h1>
-<h3 align="center">Data Science Enthusiast | MERN Stack Developer</h3>
 
-<p align="center">
-<img src="https://www.google.com/search?q=https://komarev.com/ghpvc/%3Fusername%3Dnoorunkhan7%26label%3DProfile%2520Views%26color%3D8a2be2%26style%3Dflat-square" alt="Profile Views">
-</p>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.profile { max-width: 720px; padding: 1.5rem 0; font-family: var(--font-sans); }
+.header { display: flex; align-items: center; gap: 20px; margin-bottom: 1.5rem; }
+.avatar { width: 72px; height: 72px; border-radius: 50%; background: #EEEDFE; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 500; color: #3C3489; flex-shrink: 0; border: 0.5px solid #AFA9EC; }
+.name { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+.title { font-size: 14px; color: var(--color-text-secondary); margin-top: 3px; }
+.badges { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.badge { font-size: 12px; padding: 3px 10px; border-radius: 99px; border: 0.5px solid; }
+.badge-purple { background: #EEEDFE; color: #3C3489; border-color: #AFA9EC; }
+.badge-teal { background: #E1F5EE; color: #0F6E56; border-color: #5DCAA5; }
+.social-links { display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.social-btn { font-size: 13px; padding: 6px 14px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); color: var(--color-text-secondary); text-decoration: none; display: flex; align-items: center; gap: 6px; background: var(--color-background-secondary); }
+.section { margin-bottom: 1.5rem; }
+.section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+.about-card { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; border: 0.5px solid var(--color-border-tertiary); }
+.about-row { display: flex; gap: 10px; align-items: flex-start; padding: 5px 0; font-size: 14px; color: var(--color-text-primary); line-height: 1.5; }
+.about-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.tech-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.tech-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 0.75rem 1rem; }
+.tech-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font-size: 12px; padding: 2px 8px; border-radius: 4px; background: var(--color-background-secondary); color: var(--color-text-primary); border: 0.5px solid var(--color-border-tertiary); }
+.projects { display: flex; flex-direction: column; gap: 8px; }
+.proj-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 0.875rem 1.1rem; display: flex; gap: 12px; align-items: flex-start; }
+.proj-icon { width: 36px; height: 36px; border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.proj-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+.proj-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+.highlight { background: #E1F5EE; color: #085041; border: 0.5px solid #5DCAA5; border-radius: 99px; font-size: 11px; padding: 2px 8px; display: inline-block; margin-top: 4px; }
 
-<p align="center">
-<a href="https://www.google.com/search?q=https://linkedin.com/in/noorun-khan-5917a324b">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-%25230077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" alt="LinkedIn">
-</a>
-<a href="mailto:noorun.22jdds002@jietjodhpur.ac.in">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Email-D14836%3Fstyle%3Dfor-the-badge%26logo%3Dgmail%26logoColor%3Dwhite" alt="Email">
-</a>
-<a href="https://www.google.com/search?q=https://github.com/noorunkhan7">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/GitHub-100000%3Fstyle%3Dfor-the-badge%26logo%3Dgithub%26logoColor%3Dwhite" alt="GitHub">
-</a>
-</p>
+.trophy-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.trophy-card { border-radius: var(--border-radius-lg); padding: 0.875rem 0.75rem; text-align: center; border: 0.5px solid; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.trophy-icon { font-size: 28px; line-height: 1; }
+.trophy-name { font-size: 12px; font-weight: 500; line-height: 1.3; }
+.trophy-sub { font-size: 11px; opacity: 0.75; }
+.t-gold { background: #FAEEDA; border-color: #EF9F27; color: #633806; }
+.t-silver { background: #F1EFE8; border-color: #B4B2A9; color: #2C2C2A; }
+.t-purple { background: #EEEDFE; border-color: #AFA9EC; color: #26215C; }
+.t-teal { background: #E1F5EE; border-color: #5DCAA5; color: #04342C; }
+.t-blue { background: #E6F1FB; border-color: #85B7EB; color: #042C53; }
+.t-coral { background: #FAECE7; border-color: #F0997B; color: #4A1B0C; }
+</style>
 
-😉 About Me
+<div class="profile">
+  <div class="header">
+    <div class="avatar">NFK</div>
+    <div>
+      <div class="name">Noorun Fatima Khan</div>
+      <div class="title">Data Science Enthusiast · MERN Stack Developer</div>
+      <div class="badges">
+        <span class="badge badge-purple">Top 10 · Smart India Hackathon</span>
+        <span class="badge badge-teal">Open to opportunities</span>
+      </div>
+    </div>
+  </div>
 
-🔭 Currently a Data Analytics Intern at Labmentix.
+  <div class="social-links">
+    <a class="social-btn" href="https://linkedin.com/in/noorun-khan-5917a324b">&#128101; LinkedIn</a>
+    <a class="social-btn" href="mailto:noorun.22jdds002@jietjodhpur.ac.in">&#9993; Email</a>
+    <a class="social-btn" href="https://github.com/noorunkhan7">&#128736; GitHub</a>
+  </div>
 
-💼 Previously worked as an ML Intern at DRDO & Full Stack Intern at WsCube Tech.
+  <div class="section">
+    <div class="section-title">About</div>
+    <div class="about-card">
+      <div class="about-row"><span class="about-icon">&#128300;</span><span>Data Analytics Intern at <strong>Labmentix</strong></span></div>
+      <div class="about-row"><span class="about-icon">&#128188;</span><span>Previously ML Intern at <strong>DRDO</strong> &amp; Full Stack Intern at <strong>WsCube Tech</strong></span></div>
+      <div class="about-row"><span class="about-icon">&#128172;</span><span>Ask me about Data Analysis, React.js, Python, or API Design</span></div>
+      <div class="about-row"><span class="about-icon">&#9889;</span><span>Writes code to lofi music</span></div>
+    </div>
+  </div>
 
-🏆 Proud to be in the Top 10 Teams of Smart India Hackathon (SIH).
+  <div class="section">
+    <div class="section-title">&#127942; GitHub trophies</div>
+    <div class="trophy-grid">
+      <div class="trophy-card t-gold">
+        <div class="trophy-icon">&#127942;</div>
+        <div class="trophy-name">Multi Language</div>
+        <div class="trophy-sub">Python · JS · C++ · Java</div>
+      </div>
+      <div class="trophy-card t-purple">
+        <div class="trophy-icon">&#11088;</div>
+        <div class="trophy-name">Stars</div>
+        <div class="trophy-sub">Starred repositories</div>
+      </div>
+      <div class="trophy-card t-teal">
+        <div class="trophy-icon">&#128200;</div>
+        <div class="trophy-name">Commits</div>
+        <div class="trophy-sub">Consistent contributor</div>
+      </div>
+      <div class="trophy-card t-blue">
+        <div class="trophy-icon">&#128268;</div>
+        <div class="trophy-name">Followers</div>
+        <div class="trophy-sub">Growing network</div>
+      </div>
+      <div class="trophy-card t-coral">
+        <div class="trophy-icon">&#128187;</div>
+        <div class="trophy-name">Repositories</div>
+        <div class="trophy-sub">Public projects</div>
+      </div>
+      <div class="trophy-card t-silver">
+        <div class="trophy-icon">&#128640;</div>
+        <div class="trophy-name">Pull Requests</div>
+        <div class="trophy-sub">Open source contributions</div>
+      </div>
+    </div>
+  </div>
 
-💻 I’m highly skilled in MERN Stack, Machine Learning, and Computer Vision.
+  <div class="section">
+    <div class="section-title">Tech stack</div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-label">Languages</div>
+        <div class="tech-tags">
+          <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">C</span>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-label">Web</div>
+        <div class="tech-tags">
+          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-label">Data & ML</div>
+        <div class="tech-tags">
+          <span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">MySQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-💬 Ask me about Data Analysis, React.js, Python, or API Design.
+  <div class="section">
+    <div class="section-title">Top projects</div>
+    <div class="projects">
+      <div class="proj-card">
+        <div class="proj-icon" style="background:#EEEDFE;">&#9995;</div>
+        <div>
+          <div class="proj-name">Hand sign recognition system</div>
+          <div class="proj-desc">Real-time gesture recognition using Python, OpenCV, and MediaPipe.</div>
+          <span class="highlight">Computer Vision</span>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-icon" style="background:#FAECE7;">&#128200;</div>
+        <div>
+          <div class="proj-name">Cancer detection system</div>
+          <div class="proj-desc">ML model with TensorFlow &amp; Scikit-learn for early-stage cancer classification.</div>
+          <span class="highlight">Machine Learning</span>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-icon" style="background:#EAF3DE;">&#127807;</div>
+        <div>
+          <div class="proj-name">Plant disease detection</div>
+          <div class="proj-desc">AI-based computer vision system for agricultural disease diagnosis.</div>
+          <span class="highlight">Computer Vision · AI</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-⚡ Fun Fact: I write code while listening to lofi music 🎧
-
-🛠️ Tech Stack & Tools
-
-Programming Languages
-
-<p>
-<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/c%2B%2B-%252300599C.svg%3Fstyle%3Dfor-the-badge%26logo%3Dc%252B%252B%26logoColor%3Dwhite" alt="C++">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/java-%2523ED8B00.svg%3Fstyle%3Dfor-the-badge%26logo%3Dopenjdk%26logoColor%3Dwhite" alt="Java">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/c-%252300599C.svg%3Fstyle%3Dfor-the-badge%26logo%3Dc%26logoColor%3Dwhite" alt="C">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/JavaScript-F7DF1E%3Fstyle%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3Dblack" alt="JS">
-</p>
-
-Web Development
-
-<p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/MongoDB-%25234ea94b.svg%3Fstyle%3Dfor-the-badge%26logo%3Dmongodb%26logoColor%3Dwhite" alt="MongoDB">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/express.js-%2523404d59.svg%3Fstyle%3Dfor-the-badge%26logo%3Dexpress%26logoColor%3D%252361DAFB" alt="Express">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/react-%252320232a.svg%3Fstyle%3Dfor-the-badge%26logo%3Dreact%26logoColor%3D%252361DAFB" alt="React">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/node.js-6DA55F%3Fstyle%3Dfor-the-badge%26logo%3Dnode.js%26logoColor%3Dwhite" alt="NodeJS">
-</p>
-
-Data Science, Analytics & Tools
-
-<p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/TensorFlow-%2523FF6F00.svg%3Fstyle%3Dfor-the-badge%26logo%3DTensorFlow%26logoColor%3Dwhite" alt="TF">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/opencv-%2523white.svg%3Fstyle%3Dfor-the-badge%26logo%3Dopencv%26logoColor%3Dwhite" alt="OpenCV">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/pandas-%2523150458.svg%3Fstyle%3Dfor-the-badge%26logo%3Dpandas%26logoColor%3Dwhite" alt="Pandas">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/numpy-%2523013243.svg%3Fstyle%3Dfor-the-badge%26logo%3Dnumpy%26logoColor%3Dwhite" alt="NumPy">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/PowerBI-F2C811%3Fstyle%3Dfor-the-badge%26logo%3DPower%2520BI%26logoColor%3Dwhite" alt="PowerBI">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Tableau-E97627%3Fstyle%3Dfor-the-badge%26logo%3DTableau%26logoColor%3Dwhite" alt="Tableau">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/mysql-4479A1.svg%3Fstyle%3Dfor-the-badge%26logo%3Dmysql%26logoColor%3Dwhite" alt="MySQL">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Git-F05032%3Fstyle%3Dfor-the-badge%26logo%3Dgit%26logoColor%3Dwhite" alt="Git">
-</p>
-
-🚀 Top Projects
-
-Hand Sign Recognition System: Built a real-time gesture recognition system using Python, OpenCV, and MediaPipe.
-
-Cancer Detection System: Developed an ML model using TensorFlow and Scikit-learn to improve early-stage cancer classification.
-
-Plant Disease Detection: Designed an AI-based computer vision system for agricultural disease diagnosis.
-
-🏆 GitHub Trophies
-
-<p align="center">
-<img src="https://www.google.com/search?q=https://github-profile-trophy.vercel.app/%3Fusername%3Dnoorunkhan7%26theme%3Dradical%26row%3D1%26column%3D6%26no-frame%3Dtrue%26no-bg%3Dtrue" alt="Trophies">
-</p>
-
-📈 GitHub Activity
-
-<p align="center">
-<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3Dnoorunkhan7%26show_icons%3Dtrue%26theme%3Dradical%26hide_border%3Dtrue" alt="Stats">
-</p>
-<p align="center">
-<img src="https://www.google.com/search?q=https://github-readme-streak-stats.herokuapp.com/%3Fuser%3Dnoorunkhan7%26theme%3Dradical%26hide_border%3Dtrue" alt="Streak">
-</p>
-<p align="center">
-<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs/%3Fusername%3Dnoorunkhan7%26layout%3Dcompact%26theme%3Dradical%26hide_border%3Dtrue" alt="Top Langs">
-</p>
-
-<div align="center">
-<sub>Crafted with ❤️ by Noorun Fatima Khan</sub>
+  <div style="font-size: 12px; color: var(--color-text-secondary); text-align: center; padding-top: 0.5rem;">Crafted with care by Noorun Fatima Khan</div>
 </div>
